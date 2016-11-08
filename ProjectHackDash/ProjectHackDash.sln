@@ -1,6 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{05534BA7-8913-F925-E178-45BDFC0768E2}"
+
+Project("{C33B85A5-DCAE-309B-9DA2-33F954A123CE}") = "ProjectHackDash", "Assembly-CSharp.csproj", "{05534BA7-8913-F925-E178-45BDFC0768E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,12 +3,41 @@ namespace CharacterUtils
 {
 	public class Character
 	{
-		private String name;
+		private string name;
+		public string Name {
+			get { return name; }
+			set { name = value; }
+		}
+
 		private long hp;
+		public long Hp {
+			get { return hp; }
+			set { hp = value; }
+		}
+
 		private long strength;
+		public long Strength {
+			get { return strength; }
+			set { strength = value; }
+		}
+
 		private long dexterity;
+		public long Dexterity {
+			get { return dexterity; }
+			set { dexterity = value; }
+		}
+
 		private long intellect;
+		public long Intellect {
+			get { return intellect; }
+			set { intellect = value; }
+		}
+
 		private double moveSpeed;
+		public double MoveSpeed {
+			get { return moveSpeed; }
+			set { moveSpeed = value; }
+		}
 
 		public Character()
 		{
@@ -20,40 +49,23 @@ namespace CharacterUtils
 			this.moveSpeed = 1.0;
 		}
 
-		public Character(String name, long HP, long strength, long dexterity, long intellect, double moveSpeed) {
+		public Character(string name, long hp, long strength, long dexterity, long intellect, double moveSpeed) {
 			this.name = name;
-			this.hp = HP;
+			this.hp = hp;
 			this.strength = strength;
 			this.dexterity = dexterity;
 			this.intellect = intellect;
 			this.moveSpeed = moveSpeed;
 		}
 
-		public String getName() { return this.name; }
-		public void setName(String name) { this.name = name; }
-
-		public long getHP(long HP) { return this.hp; }
-		public void setHP(long HP) { this.hp = HP; }
-
-		public long getStrength() { return this.strength; }
-		public void setStrength(long strength) { this.strength = strength; }
-
-		public long getDexterity() { return this.dexterity; }
-		public void setDexterity(long dexterity) { this.dexterity = dexterity; }
-
-		public long getIntellect() { return this.intellect; }
-		public void setIntellect(long intellect) { this.intellect = intellect; }
-
-		public double getMoveSpeed() { return moveSpeed; }
-		public void setMoveSpeed(double moveSpeed) { this.moveSpeed = moveSpeed; }
 		public void changeMoveSpeed(double change) {
-			double newSpeed = getMoveSpeed() + change;
+			double newSpeed = MoveSpeed + change;
 			if (newSpeed < 0.0)
 				newSpeed = 0.0;
 
 			// An upper bound needs to be picked too
 
-			setMoveSpeed(newSpeed);
+			MoveSpeed = newSpeed;
 		}
 
 	}

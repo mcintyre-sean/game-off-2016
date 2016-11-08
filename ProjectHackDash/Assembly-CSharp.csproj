@@ -47,6 +47,9 @@
   <ItemGroup>
      <Compile Include="Assets\CharacterUtils\Character.cs" />
      <Compile Include="Assets\CharacterUtils\Player.cs" />
+     <Compile Include="Assets\ItemUtils\Armor.cs" />
+     <Compile Include="Assets\ItemUtils\Item.cs" />
+     <Compile Include="Assets\ItemUtils\Weapon.cs" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
@@ -56,12 +59,6 @@
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
- <Compile Include="Assets\ItemUtils\Weapon.cs" />
- <Compile Include="Assets\ItemUtils\Item.cs" />
- <Compile Include="Assets\ItemUtils\Armor.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\ItemUtils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

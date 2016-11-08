@@ -68,7 +68,19 @@ namespace ItemUtils
 		}
 
 		public override string ToString() {
-			return string.Format("[Item: Name={0}\nItemLevel={1}\nStrBonus={2}\nDexBonus={3}\nIntBonus={4}\nMoveSpdBonus={5}]\n", Name, ItemLevel, StrBonus, DexBonus, IntBonus, MoveSpdBonus);
+			var s = string.Format("{0}\n", Name);
+			if (ItemLevel > 0)
+				s += string.Format("\tItemLevel={0}\n", ItemLevel);
+			if (StrBonus > 0)
+				s += string.Format("\tStrBonus={0}\n", StrBonus);
+			if (DexBonus > 0)
+				s += string.Format("\tDexBonus={0}\n", DexBonus);
+			if (IntBonus > 0)
+				s += string.Format("\tIntBonus={0}\n", IntBonus);
+			if (MoveSpdBonus > 0.0)
+				s += string.Format("\tMoveSpdBonus={0}\n", MoveSpdBonus);
+
+			return s;
 		}
 	}
 }

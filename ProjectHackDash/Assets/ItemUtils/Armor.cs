@@ -10,16 +10,19 @@ namespace ItemUtils
 			set { defence = value; }
 		}
 
-		public Armor() : base()
+		public Armor()
 		{
 			this.defence = 0;
 		}
 
-		public Armor(String name, int itemLevel, long strBonus, long dexBonus, long intBonus,
-					  double moveSpdBonus, long defence)
-			: base(name, itemLevel, strBonus, dexBonus, intBonus, moveSpdBonus)
-		{
+		public Armor(string name, int itemLevel, long strBonus, long dexBonus, long intBonus,
+					 double moveSpdBonus, long defence) :
+		base(name, itemLevel, strBonus, dexBonus, intBonus, moveSpdBonus) {
 			this.defence = defence;
+		}
+
+		public override string ToString() {
+			return string.Format("\tDefence={0}", Defence);
 		}
 	}
 }

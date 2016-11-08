@@ -43,6 +43,9 @@
     <Reference Include="UnityEditor">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>packages\NUnit.3.5.0\lib\net35\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterUtils\Character.cs" />

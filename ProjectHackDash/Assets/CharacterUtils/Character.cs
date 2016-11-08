@@ -68,5 +68,13 @@ namespace CharacterUtils
 			MoveSpeed = newSpeed;
 		}
 
+		public override string ToString() {
+			return string.Format("Character: Name={0}\n" +
+			                     "\tHp={1}\n" +
+			                     "\tStrength={2}\n" +
+			                     "\tDexterity={3}\n" +
+			                     "\tIntellect={4}\n" +
+			                     "\tMoveSpeed={5}", Name, Hp, Strength, Dexterity, Intellect, MoveSpeed);
+		}
 	}
 }

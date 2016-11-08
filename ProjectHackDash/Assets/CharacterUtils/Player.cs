@@ -48,19 +48,13 @@ namespace CharacterUtils
 			set { boots = value; }
 		}
 
-		public Player() : base()
-		{
-			this.rightHand = new Weapon();
-			this.leftHand = new Weapon();
-			this.helmet = new Armor();
-			this.chest = new Armor();
-			this.gloves = new Armor();
-			this.boots = new Armor();
+		public Player() {
+			newPlayerGear();
 		}
 
-		public Player(String name, long hp, long strength, long dexterity, long intellect, double moveSpeed) :
+		public Player(string name, long hp, long strength, long dexterity, long intellect, double moveSpeed) :
 		base(name, hp, strength, dexterity, intellect, moveSpeed) {
-			
+			newPlayerGear();
 		}
 
 		private void newPlayerGear() {
@@ -73,8 +67,18 @@ namespace CharacterUtils
 		}
 
 		public void calculateAvgItemLevel() {
-			int totalItemLevel = RightHand.ItemLevel + LeftHand.ItemLevel + Helmet.ItemLevel + Chest.ItemLevel + Gloves.ItemLevel + Boots.ItemLevel;
+			var totalItemLevel = RightHand.ItemLevel + LeftHand.ItemLevel + Helmet.ItemLevel + Chest.ItemLevel + Gloves.ItemLevel + Boots.ItemLevel;
 			AvgItemLevel = totalItemLevel / GEAR_COUNT;
+		}
+
+		public override string ToString() {
+			return string.Format("\tPlayer: AvgItemLevel={0}\n" +
+			                     "\tRightHand={1}\n" +
+			                     "\tLeftHand={2}\n" +
+			                     "\tHelmet={3}\n" +
+			                     "\tChest={4}\n" +
+			                     "\tGloves={5}\n" +
+			                     "\tBoots={6}", AvgItemLevel, RightHand, LeftHand, Helmet, Chest, Gloves, Boots);
 		}
 	}
 }

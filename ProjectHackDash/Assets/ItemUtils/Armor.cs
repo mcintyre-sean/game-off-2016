@@ -3,6 +3,8 @@ namespace ItemUtils
 {
 	public class Armor : Item
 	{
+		private enum Slot { Head, Chest, Hands, Feet };
+
 		private long defence;
 
 		public long Defence {

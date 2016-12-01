@@ -24,10 +24,10 @@ namespace CharacterUtils
 			set { leftHand = value; }
 		}
 
-		private Armor helmet;
-		Armor Helmet {
-			get { return helmet; }
-			set { helmet = value; }
+		private Armor head;
+		Armor Head {
+			get { return head; }
+			set { head = value; }
 		}
 
 		private Armor chest;
@@ -36,16 +36,16 @@ namespace CharacterUtils
 			set { chest = value; }
 		}
 
-		private Armor gloves;
-		Armor Gloves {
-			get { return gloves; }
-			set { gloves = value; }
+		private Armor hands;
+		Armor Hands {
+			get { return hands; }
+			set { hands = value; }
 		}
 
-		private Armor boots;
-		Armor Boots {
-			get { return boots; }
-			set { boots = value; }
+		private Armor feet;
+		Armor Feet {
+			get { return feet; }
+			set { feet = value; }
 		}
 
 		public Player() {
@@ -60,14 +60,14 @@ namespace CharacterUtils
 		private void newPlayerGear() {
 			RightHand = new Weapon();
 			LeftHand = new Weapon();
-			Helmet = new Armor();
+			Head = new Armor();
 			Chest = new Armor();
-			Gloves = new Armor();
-			Boots = new Armor();
+			Hands = new Armor();
+			Feet = new Armor();
 		}
 
 		public void calculateAvgItemLevel() {
-			var totalItemLevel = RightHand.ItemLevel + LeftHand.ItemLevel + Helmet.ItemLevel + Chest.ItemLevel + Gloves.ItemLevel + Boots.ItemLevel;
+			var totalItemLevel = RightHand.ItemLevel + LeftHand.ItemLevel + Head.ItemLevel + Chest.ItemLevel + Hands.ItemLevel + Feet.ItemLevel;
 			AvgItemLevel = totalItemLevel / GEAR_COUNT;
 		}
 
@@ -78,7 +78,7 @@ namespace CharacterUtils
 			                     "\tHelmet={3}\n" +
 			                     "\tChest={4}\n" +
 			                     "\tGloves={5}\n" +
-			                     "\tBoots={6}", AvgItemLevel, RightHand, LeftHand, Helmet, Chest, Gloves, Boots);
+			                     "\tBoots={6}", AvgItemLevel, RightHand, LeftHand, Head, Chest, Hands, Feet);
 		}
 	}
 }
